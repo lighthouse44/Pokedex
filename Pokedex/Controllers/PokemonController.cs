@@ -36,7 +36,6 @@ namespace Pokedex.Controllers
             return Ok(result.Result);
         }
 
-
         [HttpGet("translated/{name}")]
         public async Task<ActionResult<IPokemon>> GetTranslated(string name)
         {

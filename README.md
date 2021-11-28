@@ -67,5 +67,5 @@ Nuget packages:
 
 ## 
 TODO for prod api
-- Client level unit tests
+- Client level unit tests, only did service level in interest of time
 - Potentailly add versioning to api /v1/..

@@ -27,8 +27,11 @@ namespace Pokedex.Services
         public async Task<GenericResult<Pokemon>> GetTranslatedPokemonAsync(string name)
         {
             var pokemonResult = await GetPokemonAsync(name);
-            if(pokemonResult == null || pokemonResult.Success == false)
+            if (pokemonResult == null || pokemonResult.Success == false)
+            {
+                _logger.LogError($"Failed to retrieve pokemon {name}, skipping translation");
                 return pokemonResult;
+            }
 
             GenericResult<string>? translationResult;
 
