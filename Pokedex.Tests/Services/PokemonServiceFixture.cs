@@ -12,9 +12,9 @@ namespace Pokedex.Tests
 {
     public class PokemonServiceFixture
     {
-        private Mock<IPokeApiClient> _pokeApiClient;
-        private Mock<IFunTranslationsApiClient> _funTranslationApiClient;
-        private Mock<ILogger<IPokemonService>> _logger;
+        private Mock<IPokeApiClient> _pokeApiClient = new Mock<IPokeApiClient>(MockBehavior.Strict);
+        private Mock<IFunTranslationsApiClient> _funTranslationApiClient = new Mock<IFunTranslationsApiClient>(MockBehavior.Strict);
+        private Mock<ILogger<IPokemonService>> _logger = new Mock<ILogger<IPokemonService>>();
 
         [SetUp]
         public void Setup()
